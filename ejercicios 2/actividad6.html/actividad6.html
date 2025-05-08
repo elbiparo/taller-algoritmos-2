@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salario</title>
+    <link rel="stylesheet" href="estilos6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Salario</h1>
+        <div class="calculator">
+            <div class="form-group">
+                <label for="salarioBruto">Salario Bruto ($):</label>
+                <input type="number" id="salarioBruto" min="1" placeholder="Ingrese el salario bruto">
+            </div>
+            <button id="calcular">Calcular Salario</button>
+            <div class="results" id="resultados">
+                <div class="result-item">
+                    <span>Salario Bruto:</span>
+                    <span id="salario-bruto-resultado">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Porcentaje de Retención:</span>
+                    <span id="porcentaje-retencion">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Valor Retención:</span>
+                    <span id="valor-retencion">-</span>
+                </div>
+                <div class="result-item salario-neto">
+                    <span>Salario Neto:</span>
+                    <span id="salario-neto">-</span>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <h2>Información:</h2>
+            <ul>
+                <li>Si el salario bruto es igual o superior a $2.000.000, la retención es del 10%</li>
+                <li>Si el salario bruto es inferior a $2.000.000, la retención es del 3%</li>
+                <li>El salario neto es el salario bruto menos la retención</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script6.js"></script>
+</body>
+</html>

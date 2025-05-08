@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.description {
+    background-color: #f7f9fc;
+    border-left: 4px solid #4e73df;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 0 6px 6px 0;
+}
+
+.description p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.description ul {
+    padding-left: 20px;
+}
+
+.description li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.form-container {
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4e73df;
+    box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.2);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #3a5ccc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(78, 115, 223, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.results {
+    background-color: #f8f9fc;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #e3e6f0;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 600;
+    color: #5a5c69;
+}
+
+.result-value {
+    font-weight: 500;
+    color: #4e73df;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}

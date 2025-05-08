@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pasajes Aéreos</title>
+    <link rel="stylesheet" href="estilos5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Pasajes Aéreos</h1>
+        <div class="calculator">
+            <div class="form-group">
+                <label for="distancia">Distancia a recorrer (km):</label>
+                <input type="number" id="distancia" min="1" placeholder="Ingrese la distancia en kilómetros">
+            </div>
+            <button id="calcular">Calcular Precio</button>
+            <div class="results" id="resultados">
+                <div class="result-item">
+                    <span>Distancia (km):</span>
+                    <span id="distancia-resultado">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Precio base (ida y vuelta):</span>
+                    <span id="precio-base">-</span>
+                </div>
+                <div class="result-item" id="descuento-container">
+                    <span>Descuento (30%):</span>
+                    <span id="descuento">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Precio final:</span>
+                    <span id="precio-final">-</span>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <h2>Información:</h2>
+            <ul>
+                <li>Precio por kilómetro: $150</li>
+                <li>Para distancias mayores a 1.000 km, se aplica un descuento del 30%</li>
+                <li>El precio calculado incluye ida y vuelta</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script5.js"></script>
+</body>
+</html>

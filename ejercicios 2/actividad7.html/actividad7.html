@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador Par o Impar</title>
+    <link rel="stylesheet" href="estilos7.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verificador de Números</h1>
+        <div class="calculator">
+            <div class="form-group">
+                <label for="numero">Ingrese un número:</label>
+                <input type="number" id="numero" placeholder="Escriba cualquier número entero">
+            </div>
+            <button id="verificar">Verificar</button>
+            <div class="result" id="resultado">
+                <p>El resultado se mostrará aquí</p>
+            </div>
+        </div>
+        <div class="info">
+            <h2>¿Qué es un número par o impar?</h2>
+            <ul>
+                <li><strong>Número par:</strong> Es aquel que es divisible entre 2 sin dejar residuo (el residuo es 0).</li>
+                <li><strong>Número impar:</strong> Es aquel que al dividirlo entre 2 deja un residuo de 1.</li>
+                <li>Ejemplo: 4 es par porque 4 ÷ 2 = 2 (sin residuo)</li>
+                <li>Ejemplo: 7 es impar porque 7 ÷ 2 = 3 con residuo 1</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script7.js"></script>
+</body>
+</html>

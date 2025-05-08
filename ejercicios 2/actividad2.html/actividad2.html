@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Compra de Camisas</title>
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Compra de Camisas</h1>
+        
+        <div class="info-panel">
+            <h3>Descuentos aplicables:</h3>
+            <ul>
+                <li>Menos de 3 camisas: <span class="descuento">10% de descuento</span></li>
+                <li>3 camisas o más: <span class="descuento-mayor">20% de descuento</span></li>
+            </ul>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label for="cantidad">Cantidad de Camisas:</label>
+                <input type="number" id="cantidad" min="1" value="1">
+            </div>
+            
+            <div class="form-group">
+                <label for="precio">Precio por Camisa ($):</label>
+                <input type="number" id="precio" min="0.01" step="0.01" value="25.00">
+            </div>
+            
+            <button id="calcular">Calcular Total</button>
+        </div>
+        
+        <div class="resultado" id="resultado">
+            <h2>Resultado</h2>
+            <div id="resultadoContenido">
+                <p>Complete el formulario y presione calcular para ver el resultado.</p>
+            </div>
+        </div>
+        
+        <div class="historial-container">
+            <h2>Historial de Compras</h2>
+            <table id="historial">
+                <thead>
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Subtotal</th>
+                        <th>Descuento</th>
+                        <th>Total a Pagar</th>
+                    </tr>
+                </thead>
+                <tbody id="historialBody">
+                    <!-- Aquí se agregarán las compras calculadas -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pulsaciones</title>
+    <link rel="stylesheet" href="estilos8.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Pulsaciones</h1>
+        <div class="calculator">
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="1" max="120" placeholder="Ingrese su edad (años)">
+            </div>
+            <div class="form-group">
+                <label>Sexo:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="femenino" name="sexo" value="femenino" checked>
+                        <label for="femenino">Femenino</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="masculino" name="sexo" value="masculino">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                </div>
+            </div>
+            <button id="calcular">Calcular Pulsaciones</button>
+            <div class="results">
+                <div class="formula-box">
+                    <h3>Fórmula aplicada:</h3>
+                    <p id="formula-display">Para sexo femenino: (220 - edad) / 10</p>
+                </div>
+                <div class="result-box">
+                    <h3>Resultado:</h3>
+                    <div id="resultado">
+                        <p>Complete el formulario y haga clic en calcular</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <h2>Información:</h2>
+            <ul>
+                <li><strong>Para sexo femenino:</strong> (220 - edad) / 10 pulsaciones cada 10 segundos</li>
+                <li><strong>Para sexo masculino:</strong> (210 - edad) / 10 pulsaciones cada 10 segundos</li>
+                <li>Este cálculo proporciona una estimación de la frecuencia cardíaca recomendada durante ejercicio aeróbico</li>
+                <li>Las pulsaciones se miden contando los latidos durante 10 segundos</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script8.js"></script>
+</body>
+</html>

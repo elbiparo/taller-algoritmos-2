@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Papelería</title>
+    <link rel="stylesheet" href="estilos12.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Papelería</h1>
+            <p class="slogan">¡Lleva 5 o más cuadernos y ahorra!</p>
+        </header>
+        
+        <div class="pricing-info">
+            <div class="price-card">
+                <div class="price-header">Precio Normal</div>
+                <div class="price-amount">$2.500</div>
+                <div class="price-desc">Por cuaderno<br>(menos de 5)</div>
+            </div>
+            <div class="price-card discount">
+                <div class="price-header">Precio con Descuento</div>
+                <div class="price-amount">$2.000</div>
+                <div class="price-desc">Por cuaderno<br>(5 o más)</div>
+            </div>
+        </div>
+        
+        <div class="calculator-card">
+            <h2>Calcula tu compra</h2>
+            
+            <div class="input-group">
+                <label for="cantidad">Cantidad de Cuadernos:</label>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="decrementarCantidad()">-</button>
+                    <input type="number" id="cantidad" min="1" value="1">
+                    <button class="quantity-btn" onclick="incrementarCantidad()">+</button>
+                </div>
+                <div class="quick-buttons">
+                    <button onclick="seleccionarCantidad(1)">1</button>
+                    <button onclick="seleccionarCantidad(4)">4</button>
+                    <button onclick="seleccionarCantidad(5)">5</button>
+                    <button onclick="seleccionarCantidad(10)">10</button>
+                </div>
+            </div>
+            
+            <button id="calcular" onclick="calcularTotal()">Calcular Total</button>
+            
+            <div class="result-container">
+                <div class="result-details">
+                    <div class="result-row">
+                        <span>Cantidad:</span>
+                        <span id="resultado-cantidad">1 cuaderno(s)</span>
+                    </div>
+                    <div class="result-row">
+                        <span>Precio unitario:</span>
+                        <span id="resultado-precio">$2.500</span>
+                    </div>
+                    <div class="result-row">
+                        <span>Subtotal:</span>
+                        <span id="resultado-subtotal">$2.500</span>
+                    </div>
+                    <div class="result-row highlight">
+                        <span>Descuento:</span>
+                        <span id="resultado-descuento">$0</span>
+                    </div>
+                </div>
+                <div class="total-result">
+                    <div class="total-label">TOTAL A PAGAR:</div>
+                    <div id="resultado-total" class="total-amount">$2.500</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="visual-container">
+            <h3>Visualización de la compra</h3>
+            <div id="notebooks-visual" class="notebooks-container">
+                <!-- Los cuadernos se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+        
+        <div class="history-card">
+            <h3>Historial de Compras</h3>
+            <div class="table-container">
+                <table id="historial">
+                    <thead>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                            <th>Descuento</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- El historial se generará dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script12.js"></script>
+</body>
+</html>

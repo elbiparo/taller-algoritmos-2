@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Vivienda de Interés Social</title>
+    <link rel="stylesheet" href="estilos13.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Vivienda de Interés Social</h1>
+        
+        <div class="form-container">
+            <div class="input-group">
+                <label for="valorVivienda">Valor de la Vivienda ($):</label>
+                <input type="number" id="valorVivienda" placeholder="Ej: 100000000" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label for="ingresosMensuales">Ingresos Mensuales ($):</label>
+                <input type="number" id="ingresosMensuales" placeholder="Ej: 1500000" min="0">
+            </div>
+            
+            <button id="calcular">Calcular</button>
+        </div>
+        
+        <div class="results" id="results">
+            <h2>Resultados</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <span class="result-label">Plan aplicado:</span>
+                    <span id="planAplicado" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cuota inicial (%):</span>
+                    <span id="porcentajeInicial" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cuota inicial ($):</span>
+                    <span id="cuotaInicial" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Monto a financiar ($):</span>
+                    <span id="montoFinanciar" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Tasa de interés mensual:</span>
+                    <span id="tasaInteres" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Plazo (meses):</span>
+                    <span id="plazoMeses" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cuota mensual ($):</span>
+                    <span id="cuotaMensual" class="result-value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Costo total ($):</span>
+                    <span id="costoTotal" class="result-value">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script13.js"></script>
+</body>
+</html>

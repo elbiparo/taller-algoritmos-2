@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuentos</title>
+    <link rel="stylesheet" href="estilos15.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Descuentos</h1>
+        
+        <div class="description">
+            <p>Este programa calcula el descuento aplicable según el valor de la compra:</p>
+            <ul>
+                <li>Si la compra es <strong>superior a $200.000</strong>, aplica un <strong>descuento del 17%</strong></li>
+                <li>Si la compra es <strong>igual o inferior a $200.000</strong>, aplica un <strong>descuento del 5%</strong></li>
+            </ul>
+        </div>
+        
+        <div class="form-container">
+            <div class="input-group">
+                <label for="valorCompra">Valor de la compra ($):</label>
+                <input type="number" id="valorCompra" placeholder="Ej: 250000" min="0">
+            </div>
+            
+            <button id="calcular">Calcular Descuento</button>
+        </div>
+        
+        <div class="results" id="results">
+            <div class="result-item">
+                <span class="result-label">Valor de la compra:</span>
+                <span id="compraTotal" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Porcentaje de descuento:</span>
+                <span id="porcentajeDescuento" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Valor del descuento:</span>
+                <span id="valorDescuento" class="result-value">-</span>
+            </div>
+            <div class="result-item highlight">
+                <span class="result-label">Total a pagar:</span>
+                <span id="totalPagar" class="result-value">-</span>
+            </div>
+        </div>
+        
+        <div class="receipt" id="receipt">
+            <h3>Simulación de Factura</h3>
+            <div class="receipt-header">
+                <p>ALMACÉN DESCUENTOS</p>
+                <p>NIT: 900.123.456-7</p>
+                <p id="fechaCompra">Fecha: </p>
+            </div>
+            <div class="receipt-body">
+                <div class="receipt-row">
+                    <span>Subtotal:</span>
+                    <span id="receiptSubtotal">-</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Descuento (<span id="receiptPorcentaje">-%</span>):</span>
+                    <span id="receiptDescuento">-</span>
+                </div>
+                <div class="receipt-row total">
+                    <span>TOTAL A PAGAR:</span>
+                    <span id="receiptTotal">-</span>
+                </div>
+            </div>
+            <div class="receipt-footer">
+                <p>¡Gracias por su compra!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script15.js"></script>
+</body>
+</html>

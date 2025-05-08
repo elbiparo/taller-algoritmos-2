@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Formas de Pago</title>
+    <link rel="stylesheet" href="estilos11.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Formas de Pago</h1>
+        <p class="info">Determina cómo pagar según el valor de la compra</p>
+        
+        <div class="card">
+            <div class="form-group">
+                <label for="monto">Valor Total de la Compra ($):</label>
+                <input type="number" id="monto" min="1" value="1000000" step="100000">
+                <div class="preset-buttons">
+                    <button onclick="presetMonto(1000000)">$1M</button>
+                    <button onclick="presetMonto(5000000)">$5M</button>
+                    <button onclick="presetMonto(10000000)">$10M</button>
+                </div>
+            </div>
+            
+            <button id="calcular" onclick="calcularPago()">Calcular Formas de Pago</button>
+            
+            <div class="resultados">
+                <h2>Desglose de Pagos:</h2>
+                <div class="resultado-grid">
+                    <div class="resultado-item">
+                        <div class="resultado-label">Recursos Propios:</div>
+                        <div id="recursos-propios" class="resultado-valor">$0</div>
+                    </div>
+                    <div class="resultado-item">
+                        <div class="resultado-label">Préstamo Bancario:</div>
+                        <div id="prestamo-banco" class="resultado-valor">$0</div>
+                    </div>
+                    <div class="resultado-item">
+                        <div class="resultado-label">Crédito Fabricante:</div>
+                        <div id="credito-fabricante" class="resultado-valor">$0</div>
+                    </div>
+                    <div class="resultado-item">
+                        <div class="resultado-label">Interés (15%):</div>
+                        <div id="interes" class="resultado-valor">$0</div>
+                    </div>
+                    <div class="resultado-item total">
+                        <div class="resultado-label">TOTAL A PAGAR:</div>
+                        <div id="total-pagar" class="resultado-valor">$0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3>Distribución de Pagos</h3>
+            <div class="chart-container">
+                <div class="bar-chart" id="chart">
+                    <!-- Las barras se generarán dinámicamente con JavaScript -->
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item"><span class="color-box recursos"></span>Recursos Propios</div>
+                    <div class="legend-item"><span class="color-box banco"></span>Préstamo Bancario</div>
+                    <div class="legend-item"><span class="color-box fabricante"></span>Crédito Fabricante</div>
+                    <div class="legend-item"><span class="color-box interes"></span>Interés</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-card">
+            <h3>Historial de Cálculos</h3>
+            <div class="table-container">
+                <table id="historial">
+                    <thead>
+                        <tr>
+                            <th>Valor Compra</th>
+                            <th>Recursos Propios</th>
+                            <th>Préstamo Banco</th>
+                            <th>Crédito Fabricante</th>
+                            <th>Interés</th>
+                            <th>Total a Pagar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- El historial se generará dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script11.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorías</title>
+    <link rel="stylesheet" href="estilos10.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Calorías en Reposo</h1>
+        <p class="info">Para una persona enferma de 70 kg</p>
+        
+        <div class="card">
+            <div class="form-group">
+                <label for="actividad">Selecciona la actividad:</label>
+                <select id="actividad">
+                    <option value="dormir">Dormir (1.08 cal/min)</option>
+                    <option value="sentado">Sentado en reposo (1.66 cal/min)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tiempo">Tiempo (minutos):</label>
+                <input type="number" id="tiempo" min="1" value="60">
+                <div class="time-buttons">
+                    <button onclick="presetTime(30)">30 min</button>
+                    <button onclick="presetTime(60)">1 hora</button>
+                    <button onclick="presetTime(480)">8 horas</button>
+                </div>
+            </div>
+            
+            <button id="calcular" onclick="calcularCalorias()">Calcular</button>
+            
+            <div class="resultados">
+                <h2>Resultados:</h2>
+                <div id="resultado" class="resultado-valor">0 calorías</div>
+            </div>
+        </div>
+        
+        <div class="history-card">
+            <h3>Historial de Cálculos</h3>
+            <ul id="historial"></ul>
+        </div>
+    </div>
+    
+    <script src="script10.js"></script>
+</body>
+</html>
